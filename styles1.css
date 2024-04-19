@@ -1,0 +1,117 @@
+/* Header */
+.header {
+    background-color: maroon;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 32px;
+    animation: typing 3s steps(40, end);
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: black;
+  }
+  
+  .navbar-brand {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Recommended Section */
+  .recommended {
+    padding: 50px 0;
+  }
+  
+  .recommended h2 {
+    color: #333;
+  }
+  
+  .card {
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .footer {
+    background-color: maroon;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footer h3 {
+    margin-bottom: 15px;
+  }
+  
+  .icons {
+    text-align: center;
+  }
+  
+  .icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .icons a:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+  
+  .contact-icons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .contact-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .contact-icons a:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+  
+  .contact-icons span {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  .offline-store {
+    text-align: center;
+  }
+  
+  .location-icon {
+    margin-top: 10px;
+  }
+  
+  .location-icon span {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  

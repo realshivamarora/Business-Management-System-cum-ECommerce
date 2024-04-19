@@ -1,0 +1,102 @@
+/* Header */
+.header {
+    background-color: maroon;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 32px;
+    animation: typing 3s steps(40, end);
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  /* Admin Functionalities Section */
+.admin-functionalities {
+    padding: 50px 0;
+  }
+  
+  .admin-functionalities h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .admin-functionalities .card {
+    transition: transform 0.3s;
+  }
+  
+  .admin-functionalities .card:hover {
+    transform: scale(1.05);
+  }
+  
+/* Footer */
+/* Footer */
+/* Footer */
+.footer {
+    background-color: maroon;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footer h3 {
+    margin-bottom: 15px;
+  }
+  
+  .icons {
+    text-align: center;
+  }
+  
+  .icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .icons a:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+  
+  .contact-icons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .contact-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .contact-icons a:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+  
+  .contact-icons span {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  .offline-store {
+    text-align: center;
+  }
+  
+  .location-icon {
+    margin-top: 10px;
+  }
+  
+  .location-icon span {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  

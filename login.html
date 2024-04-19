@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1 class="animated-text">Arora Garments - Business Management System</h1>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 login-form">
+      <form action="/login" method="post">
+        <h2 class="text-center mb-4">Login</h2>
+        <div class="form-group">
+          <label for="Username">Username</label>
+          <input type="text" class="form-control" name="Username" id="Username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="Password">Password</label>
+          <input type="password" class="form-control" name="Password" id="Password" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <p class="text-center mt-3">
+          <a href="#" class="login-guest">Login as Guest...</a><br>
+          <a href="#" class="register-now">New User... Register Now...</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 transparent-box">
+      <a href="#" class="login-admin">Login As Admin</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container text-center">
+    <p>&copy Copyright 2024 - Shivam Arora | All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="script3.js"></script>
+</body>
+</html>

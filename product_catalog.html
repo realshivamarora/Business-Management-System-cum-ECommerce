@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Arora Garments</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="prcss.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.getScript("payments_received.js");
+    });
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1 class="animated-text">Arora Garments - Business Management System</h1>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="admin.html">Admin Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ledgerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ledger
+          </a>
+          <div class="dropdown-menu" aria-labelledby="ledgerDropdown">
+            <a class="dropdown-item" href="payments_Received.html">Payments Received</a>
+            <a class="dropdown-item" href="payments_done.html">Payments Done</a>
+            <a class="dropdown-item" href="accounts.html">Accounts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Expenses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Customer Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Billing System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">View Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product Catalog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="payments-received">
+  <div class="container">
+    <h2 class="text-center mb-4">Products Available</h2>
+    <!-- Your content for customer details goes here -->
+  </div>
+</section>
+<script src="accounts.js"></script>
+
+
+<div class="table-container"><table class="table table-bordered table-striped"><thead><tr><th>Product ID</th><th>Product</th><th>Firm</th><th>Firm Address</th><th>Product Category</th><th>Stock Left</th><th>Cost Price</th><th>GST (in %)</th><th>Gross Cost Price</th></tr></thead><tbody><tr><td>1</td><td>Men Shirts Formal</td><td>Ambika Garments</td><td>Ludhiana</td><td>Formals</td><td>40</td><td>300</td><td>5</td><td>315</td></tr><tr><td>2</td><td>Women Shirts Formal</td><td>Ambika Garments</td><td>Ludhiana</td><td>Formals</td><td>20</td><td>310</td><td>5</td><td>325.5</td></tr><tr><td>3</td><td>Men Blazer</td><td>Ambika Garments</td><td>Ludhiana</td><td>PartyWear</td><td>10</td><td>1500</td><td>5</td><td>1575</td></tr><tr><td>4</td><td>Women Shawl Printed</td><td>Guru Kirpa Textiles</td><td>Ludhiana</td><td>WinterWear</td><td>50</td><td>200</td><td>5</td><td>210</td></tr><tr><td>5</td><td>Men Shawl</td><td>Guru Nanak Textiles</td><td>Ludhiana</td><td>WinterWear</td><td>45</td><td>210</td><td>5</td><td>220.5</td></tr><tr><td>6</td><td>Women Sweaters</td><td>Rishi And Sons</td><td>Ludhiana</td><td>WinterWear</td><td>60</td><td>250</td><td>5</td><td>262.5</td></tr><tr><td>7</td><td>Lehanga Red</td><td>Rachna Fashions</td><td>Delhi</td><td>MarriageWear</td><td>10</td><td>1300</td><td>5</td><td>1365</td></tr><tr><td>8</td><td>Saree Silk</td><td>Achin Saree Center</td><td>Delhi</td><td>PartyWear</td><td>20</td><td>700</td><td>5</td><td>735</td></tr><tr><td>9</td><td>Saree Girlish</td><td>Awanish Textiles</td><td>Delhi</td><td>PartyWear</td><td>5</td><td>750</td><td>5</td><td>787.5</td></tr><tr><td>10</td><td>Saree Print</td><td>Panwar Textiles</td><td>Meerut</td><td>CasualWear</td><td>100</td><td>250</td><td>5</td><td>262.5</td></tr><tr><td>100</td><td>SDFDS</td><td>FDS</td><td>FDXS</td><td>VFDX</td><td>5</td><td>5</td><td>5</td><td>5</td></tr><tr><td>20</td><td>Saree Multicolor Silk</td><td>Kohli Sarees</td><td>Delhi</td><td>Party Wear</td><td>10</td><td>500</td><td>5</td><td>25</td></tr><tr><td>20</td><td>Saree Multicolor Silk</td><td>Kohli Sarees</td><td>Delhi</td><td>Party Wear</td><td>10</td><td>100</td><td>5</td><td>105</td></tr></tbody></table></div><footer class="footer">
+  <div class="container text-center">
+    <p>Copyright 2024 - Shivam Arora</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="payments_received_script.js"></script>
+</body>
+</html>

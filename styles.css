@@ -1,0 +1,111 @@
+/* Header */
+.header {
+  background-color: maroon;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 32px;
+  animation: typing 3s steps(40, end);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.login-form {
+  padding: 50px 20px;
+  margin-top: 50px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 160px); /* Updated to min-height for better layout */
+  display: flex;
+  align-items: center;
+}
+
+.login-form form {
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: maroon;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Login button color */
+.login-form button.btn-primary {
+  border-radius: 0;
+  background-color: maroon; /* Changed to maroon */
+  border-color: maroon; /* Changed to maroon */
+}
+
+.login-form button.btn-primary:hover {
+  background-color: #800000;
+  border-color: #800000;
+}
+
+/* Set body background image */
+body {
+  background-image: url("images/sarees.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Make login box transparent */
+.login-form {
+  padding: 50px 20px;
+  margin-top: 50px;
+  background-color: rgba(248, 249, 250, 0.8); /* Transparent grey background */
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+}
+
+/* Rest of the CSS remains the same */
+/* Decrease height of login box */
+.login-form {
+  padding: 30px 20px; /* Adjusted padding */
+  margin-top: 50px;
+  background-color: rgba(248, 249, 250, 0.8);
+  min-height: calc(80vh - 160px); /* Decreased height */
+  display: flex;
+  align-items: center;
+}
+
+/* Change color of text links */
+.login-form .text-center a {
+  color: maroon; /* Changed to maroon */
+  text-decoration: none;
+}
+
+.login-form .text-center a:hover {
+  text-decoration: underline;
+}
+
+.transparent-box {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(248, 249, 250, 0.8); /* Transparent grey background */
+  text-align: center;
+  color: maroon; /* Changed to maroon */
+  text-decoration: none;
+}
+
+.transparent-box a {
+  color: maroon; /* Changed to maroon */
+  text-decoration: none;
+}
+
+.transparent-box a:hover {
+  text-decoration: underline;
+}

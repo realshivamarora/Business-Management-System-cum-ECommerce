@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Payment Received - Arora Garments</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="new_account_styles.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1 class="animated-text">Arora Garments - Business Management System</h1>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Admin Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ledgerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ledger
+          </a>
+          <div class="dropdown-menu" aria-labelledby="ledgerDropdown">
+            <a class="dropdown-item" href="#">Payments Received</a>
+            <a class="dropdown-item" href="#">Payments Done</a>
+            <a class="dropdown-item" href="#">Accounts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Expenses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Customer Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Billing System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">View Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product Catalog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1 class="text-center mb-4">Enter Payment Received Details</h1>
+  <form action="/submit" method="post">
+    <div class="form-group">
+      <label for="CustomerID">Customer ID:</label>
+      <input type="text" class="form-control" id="CustomerID" name="CustomerID">
+    </div>
+    <div class="form-group">
+      <label for="CustomerName">Customer Name:</label>
+      <input type="text" class="form-control" id="CustomerName" name="CustomerName">
+    </div>
+    <div class="form-group">
+      <label for="CustomerAddress">Customer Address:</label>
+      <input type="text" class="form-control" id="CustomerAddress" name="CustomerAddress">
+    </div>
+    <div class="form-group">
+      <label for="MobileNumber">Mobile Number:</label>
+      <input type="text" class="form-control" id="MobileNumber" name="MobileNumber">
+    </div>
+    <div class="form-group">
+      <label for="PaymentAmount">Payment Amount:</label>
+      <input type="text" class="form-control" id="PaymentAmount" name="PaymentAmount">
+    </div>
+    <div class="form-group">
+        <label for="Date">Date (YYYY-MM-DD):</label>
+        <input type="text" class="form-control" id="Date" name="Date">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="container text-center">
+    <p>Copyright 2024 - Shivam Arora</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="new_account_script.js"></script>
+</body>
+</html>

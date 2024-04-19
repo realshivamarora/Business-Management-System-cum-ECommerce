@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Details - Arora Garments</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="prcss.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.getScript("payments_received.js");
+    });
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1 class="animated-text">Arora Garments - Business Management System</h1>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="admin.html">Admin Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ledgerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ledger
+          </a>
+          <div class="dropdown-menu" aria-labelledby="ledgerDropdown">
+            <a class="dropdown-item" href="payments_Received.html">Payments Received</a>
+            <a class="dropdown-item" href="payments_done.html">Payments Done</a>
+            <a class="dropdown-item" href="accounts.html">Accounts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Expenses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Customer Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Billing System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">View Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product Catalog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="payments-received">
+  <div class="container">
+    <h2 class="text-center mb-4">Customer Details</h2>
+    <!-- Your content for customer details goes here -->
+  </div>
+</section>
+<script src="accounts.js"></script>
+
+
+<div class="table-container"><table class="table table-bordered table-striped"><thead><tr><th>Customer ID</th><th>Customer Name</th><th>Customer Address</th><th>Customer Mobile Number</th><th>Balance</th></tr></thead><tbody><tr><td>1</td><td>Bhupinder Singh</td><td>Jalandhar</td><td>123</td><td>0</td></tr><tr><td>2</td><td>Sandip Singh</td><td>Patti</td><td>456</td><td>0</td></tr><tr><td>3</td><td>Gurwinder Kaur</td><td>Phagwara</td><td>789</td><td>0</td></tr><tr><td>4</td><td>Rashmi Mittal</td><td>Jalandhar</td><td>123</td><td>10000</td></tr><tr><td>5</td><td>Bikram Singh Majithia</td><td>Amritsar</td><td>456</td><td>100</td></tr><tr><td>6</td><td>Pratap Singh Bajwa</td><td>Chandigarh</td><td>789</td><td>0</td></tr><tr><td>7</td><td>Sheela Dixit</td><td>New Delhi</td><td>123</td><td>0</td></tr><tr><td>8</td><td>Mansi Arora</td><td>Meerut</td><td>456</td><td>-5000</td></tr><tr><td>9</td><td>Vipin Kumar Sharma</td><td>Jammu</td><td>789</td><td>1000</td></tr><tr><td>10</td><td>Vinita Dutta</td><td>Meerut</td><td>123</td><td>0</td></tr><tr><td>420</td><td>Shivam Arora</td><td>undefined</td><td>09815366293</td><td>2</td></tr><tr><td>133</td><td>fd</td><td>undefined</td><td>321</td><td>1</td></tr></tbody></table></div><footer class="footer">
+  <div class="container text-center">
+    <p>Copyright 2024 - Shivam Arora</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="payments_received_script.js"></script>
+</body>
+</html>

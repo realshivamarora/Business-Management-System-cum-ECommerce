@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page</title>
+    <link href="prcss.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="animated-text">Generate New Bill</h1>
+        </div>
+    </header>
+    <div ng-controller="myController">
+        <div class="container">
+            <div class="div1">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Enter Invoice Number:</td>
+                            <td><input type="text" id="invoiceNumber" ng-model="invoiceNumber" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Customer Name:</td>
+                            <td><input type="text" id="customerName" ng-model="customerName" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Customer Address:</td>
+                            <td><input type="text" id="customerAddress" ng-model="customerAddress" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Item Name:</td>
+                            <td><input type="text" id="itemName" ng-model="itemName" class="form-control"></td>
+                            <td>Item Amount:</td>
+                            <td><input type="text" id="itemAmount" ng-model="itemAmount" class="form-control"></td>
+                            <td>Quantity:</td>
+                            <td><input type="text" id="itemQuantity" ng-model="itemQuantity" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><button ng-click="addItem()" class="btn btn-primary">Add Item</button></td>
+                        </tr>
+                        <tr>
+                            <td>Payment Mode:</td>
+                            <td colspan="3"><input type="text" id="paymentMode" ng-model="paymentMode" class="form-control"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="finishBilling" class="btn btn-success">Finish Billing</button>
+            </div>
+        </div>
+        <hr> <!-- Horizontal line dividing div1 and div2 -->
+        <div class="container">
+            <div>
+            <div class="div2 text-center">
+                <h1 class="display-4">ARORA GARMENTS</h1>
+                <p class="lead">Kapurthala, Punjab (144601)</p>
+                <hr style="border-top: 1px dotted;">
+            </div>
+                <!-- Existing content below -->
+            
+                <p>Invoice Number: {{ invoiceNumber }}</p>
+                <p>Customer Name: {{ customerName }}</p>
+                <p>Customer Address: {{ customerAddress }}</p>
+                <p>Payment Mode: {{ paymentMode }}</p>
+                <hr style="border-top: 1px dotted;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Serial Number</th>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Item Amount</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in items">
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.amount }}</td>
+                            <td>{{ item.quantity * item.amount }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr style="border-top: 1px dotted;">
+                <p>Total Amount: {{ totalAmount }}</p>
+                <hr style="border-top: 1px dotted;">
+                <p>SGST: {{ sgst }}</p>
+                <hr style="border-top: 1px dotted;">
+                <p>CGST: {{ cgst }}</p>
+                <hr style="border-top: 1px dotted;">
+                <p>Total: {{ total }}</p>
+                <hr style="border-top: 1px dotted;">
+            </div>
+            
+        </div>
+        <hr> <!-- Horizontal line dividing div2 and div3 -->
+        <div class="div3 text-center">
+            <button id="printBill" class="btn btn-info" onclick="printBill()">Print Bill</button>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+            $scope.items = [];
+            $scope.totalAmount = 0;
+            $scope.sgst = 0;
+            $scope.cgst = 0;
+            $scope.total = 0;
+
+            $scope.addItem = function() {
+                $scope.items.push({
+                    name: $scope.itemName,
+                    amount: $scope.itemAmount,
+                    quantity: $scope.itemQuantity
+                });
+                // Add the amount of the new item to the total amount
+                $scope.totalAmount += parseFloat($scope.itemAmount) * parseInt($scope.itemQuantity);
+                
+                // Calculate SGST and CGST
+                $scope.sgst = ($scope.totalAmount * 0.025).toFixed(2);
+                $scope.cgst = ($scope.totalAmount * 0.025).toFixed(2);
+
+                // Calculate total amount including taxes
+                $scope.total = ($scope.totalAmount + parseFloat($scope.sgst) + parseFloat($scope.cgst)).toFixed(2);
+                
+                // Clear input fields after adding item
+                $scope.itemName = '';
+                $scope.itemAmount = '';
+                $scope.itemQuantity = '';
+            };
+
+            // jQuery to hide div1 on click of "Finish Billing" button
+            $("#finishBilling").click(function() {
+                $(".div1").hide();
+            });
+        });
+
+        // Function to print bill
+        function printBill() {
+            // Hide everything except div2
+            $(".div1").hide();
+            $(".div3").hide();
+            $("header").hide();
+            // Show print dialog
+            window.print();
+        }
+    </script>
+</body>
+</html>
